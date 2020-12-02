@@ -1,8 +1,8 @@
-resource "aws_vpc" "mainvpc" {
-  cidr_block       = "10.0.0.0/16"
+resource "aws_vpc" "mvpc" {
+  cidr_block       = "${var.vpc_cidr}"
   instance_tenancy = "default"
 
   tags = {
-    Name = "main-vpc"
+    Name = "prod"
   }
 }
